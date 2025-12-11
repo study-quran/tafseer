@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qur'an Tafseer Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f7f4ec;
+            color: #222;
+        }
+
+        header {
+            background: #165c4b;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+            font-size: 0.95rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .hero h2 {
+            margin-top: 0;
+            font-size: 1.6rem;
+        }
+
+        .hero p {
+            margin: 0.5rem 0 1.5rem;
+            line-height: 1.7;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 0.7rem 1.4rem;
+            border-radius: 999px;
+            border: none;
+            background: #165c4b;
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .card-grid {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 1rem 2rem;
+            font-size: 0.85rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Qur'an Tafseer &amp; Translation Portal</h1>
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <h2>Study the Qur'an in Small, Focused Segments</h2>
+        <p>
+            This website allows students to navigate tafseer and translation of each surah
+            in small ayah groups (10 or fewer ayahs per file).
+        </p>
+        <p>
+            Start your study with Surah al-Hijr (Surah #15) below.
+        </p>
+        <a class="btn-primary" href="surah-hijr.html">Open Surah al-Hijr (15)</a>
+    </section>
+
+    <section class="card-grid">
+        <article class="card">
+            <h3>Surah al-Hijr (الحجر)</h3>
+            <p>
+                Divided into multiple small HTML segments. Click below to access
+                its main page and select ayah ranges (1–10, 11–20, etc.).
+            </p>
+            <a class="btn-primary" href="surah-hijr.html">Go to Surah al-Hijr</a>
+        </article>
+
+        <article class="card">
+            <h3>Instructions</h3>
+            <p>
+                1. Click a surah.<br>
+                2. Choose an ayah range.<br>
+                3. The tafseer will load inside the page.<br><br>
+                Later you can add more surahs without touching this file.
+            </p>
+        </article>
+    </section>
+</main>
+
+<footer>
+    Designed for simple classroom use — HTML, CSS, and JavaScript only.
+</footer>
+
+</body>
+</html>

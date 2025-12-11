@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Surah al-Hijr (15) – Tafseer &amp; Translation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f7f4ec;
+            color: #222;
+        }
+
+        header {
+            background: #165c4b;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+            font-size: 0.95rem;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 1.5rem auto 2rem;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 800px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .sidebar {
+            background: white;
+            border-radius: 12px;
+            padding: 1.2rem;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .sidebar .arabic {
+            font-size: 1.7rem;
+            direction: rtl;
+            text-align: right;
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar dl {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .sidebar dt {
+            font-weight: 600;
+            margin-top: 0.4rem;
+        }
+
+        .sidebar dd {
+            margin: 0;
+            margin-left: 0;
+        }
+
+        .sidebar p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-top: 0.8rem;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.2rem 1.2rem 1.6rem;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
+            display: flex;
+            flex-direction: column;
+            min-height: 65vh;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .content-header h2 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .ayah-range-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .ayah-btn {
+            border-radius: 999px;
+            border: 1px solid #165c4b;
+            background: #f5fbf9;
+            padding: 0.35rem 0.9rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .ayah-btn.active {
+            background: #165c4b;
+            color: white;
+        }
+
+        .iframe-wrapper {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.08);
+            background: #fafafa;
+        }
+
+        iframe {
+            width: 100%;
+            height: 60vh;
+            border: none;
+            background: white;
+        }
+
+        .segment-nav {
+            margin-top: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+
+        .segment-nav button {
+            padding: 0.45rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid #ccc;
+            background: #f7f7f7;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .segment-nav button:disabled {
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 0.4rem;
+        }
+
+        .breadcrumb a {
+            color: #165c4b;
+            text-decoration: none;
+        }
+
+        .notice {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.4rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Qur'an Tafseer &amp; Translation</h1>
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+</header>
+
+<main>
+    <!-- LEFT SIDEBAR: SURAH INFO -->
+    <aside class="sidebar">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> › Surah al-Hijr
+        </div>
+
+        <div class="arabic">الحجر</div>
+        <h2>Surah al-Hijr (15)</h2>
+
+        <dl>
+            <dt>Type</dt>
+            <dd>Makki</dd>
+
+            <dt>Total Ayahs</dt>
+            <dd>99</dd>
+
+            <dt>Main Themes</dt>
+            <dd>
+                Warning to those who deny the truth, stories of past nations,
+                Allah's protection of the Qur'an, and comfort to the Prophet ﷺ.
+            </dd>
+        </dl>
+
+        <p class="notice">
+            On the right, choose an ayah range (for example, 1–10 or 11–20).
+            The tafseer and translation for that range will load inside the page.
+        </p>
+
+        <p>
+            Your original tafseer HTML files will remain as they are. This page
+            only displays them inside an iframe without changing their content.
+        </p>
+    </aside>
+
+    <!-- RIGHT: MAIN CONTENT AREA -->
+    <section class="content-card">
+        <div class="content-header">
+            <h2>Ayah Range – Tafseer &amp; Translation</h2>
+            <small id="current-range-label">Currently showing: —</small>
+        </div>
+
+        <!-- Ayah Range Buttons -->
+        <div class="ayah-range-buttons" id="ayahRangeButtons">
+            <!-- Buttons created by JavaScript -->
+        </div>
+
+        <!-- Iframe displaying your existing segment HTML -->
+        <div class="iframe-wrapper">
+            <iframe id="tafseerFrame" src="" title="Tafseer content area">
+                Your browser does not support iframes.
+            </iframe>
+        </div>
+
+        <!-- Previous / Next segment buttons -->
+        <div class="segment-nav">
+            <button id="prevSegment">← Previous Segment</button>
+            <button id="nextSegment">Next Segment →</button>
+        </div>
+    </section>
+</main>
+
+<script>
+    // 1) Define all ayah ranges for Surah al-Hijr and map them to your HTML files.
+    // Put your real HTML files in:  surah/hijr/segments/
+    const segments = [
+        { label: "1 – 10",   file: "surah/hijr/segments/015-001-010.html" },
+        { label: "11 – 20",  file: "surah/hijr/segments/015-011-020.html" },
+        { label: "21 – 30",  file: "surah/hijr/segments/015-021-030.html" },
+        { label: "31 – 40",  file: "surah/hijr/segments/015-031-040.html" },
+        { label: "41 – 50",  file: "surah/hijr/segments/015-041-050.html" },
+        { label: "51 – 60",  file: "surah/hijr/segments/015-051-060.html" },
+        { label: "61 – 70",  file: "surah/hijr/segments/015-061-070.html" },
+        { label: "71 – 80",  file: "surah/hijr/segments/015-071-080.html" },
+        { label: "81 – 90",  file: "surah/hijr/segments/015-081-090.html" },
+        { label: "91 – 99",  file: "surah/hijr/segments/015-091-099.html" }
+    ];
+
+    const buttonsContainer = document.getElementById("ayahRangeButtons");
+    const frame = document.getElementById("tafseerFrame");
+    const currentRangeLabel = document.getElementById("current-range-label");
+    const prevBtn = document.getElementById("prevSegment");
+    const nextBtn = document.getElementById("nextSegment");
+
+    let currentIndex = 0; // default: first segment
+
+    // 2) Create ayah range buttons dynamically
+    segments.forEach((segment, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = segment.label;
+        btn.className = "ayah-btn";
+        btn.addEventListener("click", () => {
+            loadSegment(index);
+        });
+        buttonsContainer.appendChild(btn);
+    });
+
+    // 3) Load a segment into the iframe
+    function loadSegment(index) {
+        currentIndex = index;
+        const segment = segments[index];
+
+        // Load your HTML file into the iframe
+        frame.src = segment.file;
+        currentRangeLabel.textContent = "Currently showing: Ayahs " + segment.label;
+
+        // Highlight active button
+        const allButtons = document.querySelectorAll(".ayah-btn");
+        allButtons.forEach((b, i) => {
+            if (i === index) {
+                b.classList.add("active");
+            } else {
+                b.classList.remove("active");
+            }
+        });
+
+        // Enable / disable prev / next
+        prevBtn.disabled = (index === 0);
+        nextBtn.disabled = (index === segments.length - 1);
+    }
+
+    // 4) Previous / Next buttons
+    prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            loadSegment(currentIndex - 1);
+        }
+    });
+
+    nextBtn.addEventListener("click", () => {
+        if (currentIndex < segments.length - 1) {
+            loadSegment(currentIndex + 1);
+        }
+    });
+
+    // 5) Load the first segment by default when page opens
+    if (segments.length > 0) {
+        loadSegment(0);
+    }
+</script>
+
+</body>
+</html>
