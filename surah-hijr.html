@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
+        /* Base styles */
         body {
             margin: 0;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -16,62 +17,68 @@
         header {
             background: #165c4b;
             color: white;
-            padding: 1rem 2rem;
+            padding: 0.8rem 1.2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 0.75rem;
         }
 
         header h1 {
             margin: 0;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 1rem;
-            font-size: 0.95rem;
+            margin-left: 0.8rem;
+            font-size: 0.9rem;
         }
 
         main {
             max-width: 1100px;
-            margin: 1.5rem auto 2rem;
-            padding: 0 1rem;
+            margin: 1rem auto 2rem;
+            padding: 0 0.75rem;
             display: grid;
             grid-template-columns: 260px 1fr;
-            gap: 1.5rem;
+            gap: 1.2rem;
         }
 
-        @media (max-width: 800px) {
-            main {
-                grid-template-columns: 1fr;
-            }
-        }
-
+        /* Sidebar */
         .sidebar {
             background: white;
             border-radius: 12px;
-            padding: 1.2rem;
+            padding: 1rem;
             box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
         }
 
-        .sidebar h2 {
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
+        .breadcrumb {
+            font-size: 0.8rem;
+            color: #555;
+            margin-bottom: 0.4rem;
         }
 
-        .sidebar .arabic {
+        .breadcrumb a {
+            color: #165c4b;
+            text-decoration: none;
+        }
+
+        .arabic {
             font-size: 1.7rem;
             direction: rtl;
             text-align: right;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .sidebar h2 {
+            margin: 0 0 0.4rem 0;
+            font-size: 1.1rem;
         }
 
         .sidebar dl {
             margin: 0;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .sidebar dt {
@@ -81,52 +88,59 @@
 
         .sidebar dd {
             margin: 0;
-            margin-left: 0;
         }
 
         .sidebar p {
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin-top: 0.8rem;
+            font-size: 0.86rem;
+            line-height: 1.5;
+            margin-top: 0.7rem;
         }
 
+        /* Content area */
         .content-card {
             background: white;
             border-radius: 12px;
-            padding: 1.2rem 1.2rem 1.6rem;
+            padding: 1rem;
             box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
             display: flex;
             flex-direction: column;
-            min-height: 65vh;
+            min-height: 60vh;
         }
 
         .content-header {
             display: flex;
             justify-content: space-between;
-            gap: 1rem;
+            gap: 0.75rem;
             align-items: center;
             flex-wrap: wrap;
         }
 
         .content-header h2 {
             margin: 0;
-            font-size: 1.2rem;
+            font-size: 1.05rem;
         }
 
+        .content-header small {
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        /* Ayah range buttons */
         .ayah-range-buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
+            gap: 0.4rem;
+            margin: 0.8rem 0;
         }
 
         .ayah-btn {
             border-radius: 999px;
             border: 1px solid #165c4b;
             background: #f5fbf9;
-            padding: 0.35rem 0.9rem;
-            font-size: 0.9rem;
+            padding: 0.35rem 0.8rem;
+            font-size: 0.85rem;
             cursor: pointer;
+            flex: 0 0 auto;
         }
 
         .ayah-btn.active {
@@ -134,6 +148,7 @@
             color: white;
         }
 
+        /* Iframe wrapper */
         .iframe-wrapper {
             flex: 1;
             border-radius: 10px;
@@ -144,13 +159,14 @@
 
         iframe {
             width: 100%;
-            height: 60vh;
+            height: 65vh;
             border: none;
             background: white;
         }
 
+        /* Prev / Next buttons */
         .segment-nav {
-            margin-top: 0.8rem;
+            margin-top: 0.7rem;
             display: flex;
             justify-content: space-between;
             gap: 0.5rem;
@@ -162,7 +178,8 @@
             border: 1px solid #ccc;
             background: #f7f7f7;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            flex: 1;
         }
 
         .segment-nav button:disabled {
@@ -170,21 +187,55 @@
             cursor: default;
         }
 
-        .breadcrumb {
-            font-size: 0.85rem;
-            color: #555;
-            margin-bottom: 0.4rem;
+        /* 🔹 Mobile adjustments */
+        @media (max-width: 800px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+                margin: 0.5rem auto 1.5rem;
+                padding: 0 0.5rem;
+            }
+
+            .content-card {
+                min-height: 70vh;
+            }
+
+            iframe {
+                height: 70vh;
+            }
         }
 
-        .breadcrumb a {
-            color: #165c4b;
-            text-decoration: none;
-        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 15px;
+            }
 
-        .notice {
-            font-size: 0.85rem;
-            color: #666;
-            margin-top: 0.4rem;
+            .ayah-range-buttons {
+                gap: 0.35rem;
+            }
+
+            /* Make buttons easier to tap on very small screens */
+            .ayah-btn {
+                flex: 1 1 calc(50% - 0.35rem);
+                text-align: center;
+                padding: 0.45rem 0.6rem;
+            }
+
+            .sidebar {
+                padding: 0.85rem;
+            }
+
+            .content-card {
+                padding: 0.85rem;
+            }
+
+            header h1 {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -217,7 +268,7 @@
             <dt>Main Themes</dt>
             <dd>
                 Warning to those who deny the truth, stories of past nations,
-                Allah's protection of the Qur'an, and comfort to the Prophet ﷺ.
+                Allah's preservation of the Qur'an, and comfort to the Prophet ﷺ.
             </dd>
         </dl>
 
@@ -227,8 +278,8 @@
         </p>
 
         <p>
-            Your original tafseer HTML files will remain as they are. This page
-            only displays them inside an iframe without changing their content.
+            Your original tafseer HTML files stay separate. This page only
+            displays them inside an iframe, so you can update them anytime.
         </p>
     </aside>
 
@@ -253,15 +304,14 @@
 
         <!-- Previous / Next segment buttons -->
         <div class="segment-nav">
-            <button id="prevSegment">← Previous Segment</button>
-            <button id="nextSegment">Next Segment →</button>
+            <button id="prevSegment">← Previous</button>
+            <button id="nextSegment">Next →</button>
         </div>
     </section>
 </main>
 
 <script>
-    // 1) Define all ayah ranges for Surah al-Hijr and map them to your HTML files.
-    // Put your real HTML files in:  surah/hijr/segments/
+    // 1) Define ayah ranges and HTML file paths
     const segments = [
         { label: "1 – 10",   file: "surah/hijr/segments/015-001-010.html" },
         { label: "11 – 20",  file: "surah/hijr/segments/015-011-020.html" },
@@ -281,15 +331,21 @@
     const prevBtn = document.getElementById("prevSegment");
     const nextBtn = document.getElementById("nextSegment");
 
-    let currentIndex = 0; // default: first segment
+    let currentIndex = 0;
 
-    // 2) Create ayah range buttons dynamically
+    // 2) Create ayah range buttons
     segments.forEach((segment, index) => {
         const btn = document.createElement("button");
         btn.textContent = segment.label;
         btn.className = "ayah-btn";
         btn.addEventListener("click", () => {
             loadSegment(index);
+            // On mobile, scroll up a bit so iframe is visible
+            if (window.innerWidth <= 800) {
+                setTimeout(() => {
+                    frame.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 100);
+            }
         });
         buttonsContainer.appendChild(btn);
     });
@@ -299,21 +355,15 @@
         currentIndex = index;
         const segment = segments[index];
 
-        // Load your HTML file into the iframe
         frame.src = segment.file;
         currentRangeLabel.textContent = "Currently showing: Ayahs " + segment.label;
 
-        // Highlight active button
         const allButtons = document.querySelectorAll(".ayah-btn");
         allButtons.forEach((b, i) => {
-            if (i === index) {
-                b.classList.add("active");
-            } else {
-                b.classList.remove("active");
-            }
+            if (i === index) b.classList.add("active");
+            else b.classList.remove("active");
         });
 
-        // Enable / disable prev / next
         prevBtn.disabled = (index === 0);
         nextBtn.disabled = (index === segments.length - 1);
     }
@@ -322,16 +372,22 @@
     prevBtn.addEventListener("click", () => {
         if (currentIndex > 0) {
             loadSegment(currentIndex - 1);
+            if (window.innerWidth <= 800) {
+                frame.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
         }
     });
 
     nextBtn.addEventListener("click", () => {
         if (currentIndex < segments.length - 1) {
             loadSegment(currentIndex + 1);
+            if (window.innerWidth <= 800) {
+                frame.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
         }
     });
 
-    // 5) Load the first segment by default when page opens
+    // 5) Load the first segment by default
     if (segments.length > 0) {
         loadSegment(0);
     }
